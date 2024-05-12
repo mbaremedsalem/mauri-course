@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mauricourse/data/localization/langue_constants.dart';
 import 'package:mauricourse/presentation/components/default_buttom.dart';
 import 'package:mauricourse/presentation/constants/constants.dart';
+import 'package:mauricourse/presentation/screens/login/index_login.dart';
 import 'package:mauricourse/size_config.dart';
 
 class Onboarding extends StatefulWidget {
@@ -19,26 +21,25 @@ class _OnboardingState extends State<Onboarding> {
         padding: const EdgeInsets.all(70.0),
         child: Column(
           children: [
-            Row(
-              children: [
-                spaceWidth(36),
-                Image.asset(
+            Center(   
+                child:Image.asset(
                         "assets/images/logo.png",
-                        height: getProportionateScreenWidth(150),
+                        height: getProportionateScreenWidth(100),
                       ),
-                      
-              ],
             ),
                   spaceHeight(40),
                   DefaultButton(
-                    onTap: () {  },
-                    text: 'Connecter',
+                    onTap: () {  
+                      
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const IndexLogin()));
+                    },
+                    text: getTranslated(context, "Connexion")!,
                   ),
                   spaceHeight(20),
                   DefaultButton(
                     onTap: () {  },
-                    text: 'Cree un Compte',
-                  )
+                    text: getTranslated(context, "Créer un compte")!,
+                  ),
           ],
         ),
       ),

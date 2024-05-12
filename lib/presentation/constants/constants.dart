@@ -17,13 +17,20 @@ final kgrey200 = Colors.grey.shade200;
 final kgrey300 = Colors.grey.shade300;
 final kgrey400 = Colors.grey.shade400;
 const kgrey500 = Color(0xFF737373);
+const kgrey700 = Color(0xFF525252);
+const kgrey800 = Color(0xFF3F3B3C);
 const kgrey900 = Color(0xFF171717);
 const greencolor = Color(0xFF14532D);
 final green50 = Colors.green.shade50;
+const colorBorderElement = Color(0xFFD3D4DB);
 final green100 = Colors.green.shade100;
 final red100 = Colors.red.shade100;
 final blue100 = Colors.blue.shade100;
 final blue50 = Colors.blue.shade50;
+
+const colorSurfaceContainerSuccess = Color(0xFFE9F9EE);
+const colorSurfaceElement = Color(0xFFF2F2F5);
+const colorSurfaceDefault = Color(0xFFFCFCFD);
 
 TextStyle textstyle = TextStyle(
     fontFamily: 'Inter',
