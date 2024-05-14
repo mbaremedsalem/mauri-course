@@ -38,7 +38,7 @@ class _OnboardingState extends State<Onboarding> {
                   spaceHeight(20),
                   DefaultButton(
                     onTap: () {  },
-                    text: getTranslated(context, "Créer un compte")!,
+                    text: getTranslated(context, "créer un compte")!,
                   ),
           ],
         ),

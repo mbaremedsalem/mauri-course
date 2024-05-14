@@ -59,6 +59,7 @@ class _IndexLoginState extends State<IndexLogin> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      spaceHeight(10),
                       Image.asset(
                         'assets/images/logo.png',
                         color: Colors.white,
@@ -66,7 +67,7 @@ class _IndexLoginState extends State<IndexLogin> {
                         width: getProportionateScreenWidth(100),
                       ),
                     
-                      spaceHeight(10),
+                      // spaceHeight(10),
                       currentState == 0
                           ? Text(
                             getTranslated(context, "Bienvenue, connectez-vous à votre compte")!,
@@ -85,7 +86,7 @@ class _IndexLoginState extends State<IndexLogin> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -190,7 +191,7 @@ class _IndexLoginState extends State<IndexLogin> {
                                   ],
                                 ),
                                 child: Center(
-                                  child: Text(getTranslated(context, 'réer un compte')!,
+                                  child: Text(getTranslated(context, 'créer un compte')!,
                                       textScaleFactor: 1.0,
                                       style: TextStyle(
                                           fontSize:
@@ -209,7 +210,7 @@ class _IndexLoginState extends State<IndexLogin> {
                               ? const LoginScreen()
                               : pays == 'Mauritania'
                                   ? const Register()
-                                  : const RegisterAutres())
+                                  : const Register())
                     ],
                   ),
                 ),

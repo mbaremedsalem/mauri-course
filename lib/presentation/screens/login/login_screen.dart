@@ -6,6 +6,7 @@ import 'package:mauricourse/presentation/components/country_select.dart';
 import 'package:mauricourse/presentation/components/default_buttom.dart';
 import 'package:mauricourse/presentation/components/langue_select.dart';
 import 'package:mauricourse/presentation/constants/constants.dart';
+import 'package:mauricourse/presentation/layout/layout.dart';
 import 'package:mauricourse/size_config.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -250,6 +251,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           text: getTranslated(context, "Connexion"),
                           onTap: () async {
                             if (_formKey.currentState!.validate()) {
+                              
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Layout()));
+
                               // BlocProvider.of<LoginCubit>(context).login(
                               //     telephonecontroller.text, password, uid, context);
                             }

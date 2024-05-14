@@ -22,5 +22,19 @@
     "Retour":"back",
     "country":"country",
     "Bienvenue, connectez-vous à votre compte":"Welcome, log in to your account",
-    "Inscrivez-vous et profitez d'une expérience Apprentissage.":"Register and enjoy a Learning experience."
+    "Inscrivez-vous et profitez d'une expérience Apprentissage.":"Register and enjoy a Learning experience.",
+    "ÉTAPE 1":"STEP 1",
+    "ÉTAPE 2":"STEP 2",
+    "ÉTAPE 3":"STEP 3",
+    "Informations personnelles":"Personal informations",
+    "Numéro national d'identification":"National identification number",
+    "nnicourt":"nni short",
+    "Confirmation numéro de téléphone":"Phone number confirmation",
+    "prenom":"first name",
+    "nom":"name",
+    "Création mot de passe":"Password creation",
+    "code":"code",
+    "codeerror":"code error",
+    "identiquemot":"same password",
+    "pageAceuile":"Home Page"
 }

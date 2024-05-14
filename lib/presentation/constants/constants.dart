@@ -27,11 +27,12 @@ final green100 = Colors.green.shade100;
 final red100 = Colors.red.shade100;
 final blue100 = Colors.blue.shade100;
 final blue50 = Colors.blue.shade50;
-
+const kGreyColor = Color(0xff8A959E);
 const colorSurfaceContainerSuccess = Color(0xFFE9F9EE);
 const colorSurfaceElement = Color(0xFFF2F2F5);
 const colorSurfaceDefault = Color(0xFFFCFCFD);
-
+const colorBorder = Color(0xFFD4D4D4);
+const colorTextMuted = Color(0xFFA3A3A3);
 TextStyle textstyle = TextStyle(
     fontFamily: 'Inter',
     fontSize: getProportionateScreenWidth(14),

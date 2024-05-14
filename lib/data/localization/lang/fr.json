@@ -1,6 +1,6 @@
 {
     "Connexion":"Connexion",
-    "Créer un compte":"Créer un compte",
+    "créer un compte":"Créer un compte",
     "suivant":"suivant",
     "en":"en",
     "fr":"fr",
@@ -22,5 +22,19 @@
     "Retour":"Retour",
     "country":"pays",
     "Bienvenue, connectez-vous à votre compte":"Bienvenue, connectez-vous à votre compte",
-    "Inscrivez-vous et profitez d'une expérience Apprentissage.":"Inscrivez-vous et profitez d'une expérience Apprentissage."
+    "Inscrivez-vous et profitez d'une expérience Apprentissage.":"Inscrivez-vous et profitez d'une expérience Apprentissage.",
+    "ÉTAPE 1":"ÉTAPE 1",
+    "ÉTAPE 2":"ÉTAPE 2",
+    "ÉTAPE 3":"ÉTAPE 3",
+    "Informations personnelles":"Informations personnelles",
+    "Numéro national d'identification":"Numéro national d'identification",
+    "nnicourt":"nni court",
+    "Confirmation numéro de téléphone":"Confirmation numéro de téléphone",
+    "prenom":"prenom",
+    "nom":"nom",
+    "Création mot de passe":"Création mot de passe",
+    "code":"code",
+    "codeerror":"code erreur",
+    "identiquemot":"identique mot",
+    "pageAceuile":"Page d'Aceuile"
 }

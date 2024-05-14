@@ -1,6 +1,6 @@
 {
     "Connexion": "تسجيل الدخول",
-    "Créer un compte": "إنشاء حساب",
+    "créer un compte": "إنشاء حساب",
     "suivant":"التالي",
     "en":"en",
     "fr":"fr",
@@ -22,5 +22,19 @@
     "Retour":"عُد خلف",
     "country":"البلد",
     "Bienvenue, connectez-vous à votre compte":"مرحباً، قم بتسجيل الدخول إلى حسابك",
-    "Inscrivez-vous et profitez d'une expérience Apprentissage.":"سجل واستمتع بتجربة تعليمية."
+    "Inscrivez-vous et profitez d'une expérience Apprentissage.":"سجل واستمتع بتجربة تعليمية.",
+    "ÉTAPE 1":"المرحلة 1",
+    "ÉTAPE 2":"المرحلة 2",
+    "ÉTAPE 3":"المرحلة 3",
+    "Informations personnelles":"معلومات شخصية",
+    "Numéro national d'identification":"رقم الهوية الوطنية",
+    "nnicourt":"نني قصيرة",
+    "Confirmation numéro de téléphone":"تأكيد رقم الهاتف",
+    "prenom":"الاسم الأول",
+    "nom":"اسم",
+    "Création mot de passe":"إنشاء كلمة المرور",
+    "code":"الرمز",
+    "codeerror":"رمز الخطأ",
+    "identiquemot":"نفس كلمة المرور",
+    "pageAceuile":"الصفحة الرئيسية"
 }
