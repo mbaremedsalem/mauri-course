@@ -9,6 +9,7 @@ import 'package:mauricourse/presentation/screens/splash/splash.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(const MyApp());

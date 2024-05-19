@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:mauricourse/business_logic/login_cubit/cubit.dart';
+import 'package:mauricourse/business_logic/login_cubit/state.dart';
 import 'package:mauricourse/data/localization/langue_constants.dart';
 import 'package:mauricourse/presentation/components/country_select.dart';
 import 'package:mauricourse/presentation/components/default_buttom.dart';
 import 'package:mauricourse/presentation/components/langue_select.dart';
+import 'package:mauricourse/presentation/components/spiner.dart';
 import 'package:mauricourse/presentation/constants/constants.dart';
 import 'package:mauricourse/presentation/layout/layout.dart';
 import 'package:mauricourse/size_config.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -25,7 +31,43 @@ class _LoginScreenState extends State<LoginScreen> {
   final telephonecontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return  BlocProvider<LoginCubit>(
+      create: (BuildContext context) => LoginCubit(),
+      child: BlocConsumer<LoginCubit, LoginStates>(
+        listener: (context, state) {
+          if (state is LoginSuccessState) {
+            if (state.loginModel.status == 200) {
+              Fluttertoast.showToast(
+                msg: 'Welcome',
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.BOTTOM,
+                timeInSecForIosWeb: 8,
+                backgroundColor: primarycolor,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              ).then((value) {
+                
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Layout()),
+                  (route) => false,
+                );
+              });
+            } else if (state.loginModel.status == 400) {
+              Fluttertoast.showToast(
+                msg: state.loginModel.message!,
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.BOTTOM,
+                timeInSecForIosWeb: 8,
+                backgroundColor: darkredcolor,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
+            }
+          }
+        },
+        builder: (context, state) {
+          return     Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Form(
@@ -94,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: SvgPicture.asset(
                                       "assets/icons/phone.svg",
                                       colorFilter:
-                                          ColorFilter.mode(primarycolor, BlendMode.srcIn),
+                                          const ColorFilter.mode(primarycolor, BlendMode.srcIn),
                                       height: 8,
                                     ),
                                   ),
@@ -220,6 +262,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       InkWell(
                         onTap: () {
+                           
                           // showDialog(
                           //     context: context,
                           //     builder: (context) => ForgetPassword());
@@ -242,7 +285,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: getProportionateScreenHeight(20),
                 ),
                 
-                     Padding(
+                state is !LoginLoadingState
+                ? 
+                 Padding(
                         padding: EdgeInsets.symmetric(
                             horizontal: getProportionateScreenWidth(20)),
                         child: 
@@ -250,18 +295,33 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: getProportionateScreenHeight(45),
                           text: getTranslated(context, "Connexion"),
                           onTap: () async {
-                            if (_formKey.currentState!.validate()) {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Layout()),
+                            
+                          );
+                            FocusScope.of(context)
+                                            .requestFocus(FocusNode());
+                                        if (_formKey.currentState!.validate()) {
+                                          LoginCubit.get(context).userLogin(
+                                            phone: telephonecontroller.text,
+                                            password: password!,
+                                          );
+                                        }
+                            
                               
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Layout()));
+                      
 
                               // BlocProvider.of<LoginCubit>(context).login(
                               //     telephonecontroller.text, password, uid, context);
-                            }
+                          
                           },
                           color: primarycolor,
                           textcolor: whitecolor,
                         ),
-                      ),
+                      ):spiner(
+                  color: primarycolor
+                ),
                 const Spacer(),
                 Padding(
                   padding: EdgeInsets.symmetric(
@@ -378,7 +438,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 spaceHeight(20),
               ],
-            )
-     ;
+            );
+        },
+      ),
+    );
+  
+  
+    
+
   }
 }

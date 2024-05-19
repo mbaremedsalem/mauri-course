@@ -32,6 +32,10 @@ dependencies:
     sdk: flutter
   # local storage
   flutter_secure_storage: ^8.0.0
+  video_player: ^2.2.18 
+  flutter_sound: ^8.3.9
+  permission_handler: ^10.0.0
+  fluttertoast: ^8.2.5
   flutter_bloc: ^8.1.2
   path: ^1.8.2 
   path_provider:

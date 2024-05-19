@@ -58,25 +58,62 @@ class _LayoutState extends State<Layout> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: cubit.currentIndex,
           type: BottomNavigationBarType.fixed,
-          items: const [
+          items:  [
             BottomNavigationBarItem(
-              activeIcon: Icon(Icons.home,color: primarycolor,),
-              icon: Icon(Icons.home, color: Colors.black,),
+              activeIcon: Image.asset(
+                        "assets/images/home.png",
+                        color: primarycolor,
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // const Icon(Icons.home,color: primarycolor,),
+              icon: 
+               Image.asset(
+                        "assets/images/home.png",
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.home, color: Colors.black,),
               label: ''
               ),
               BottomNavigationBarItem(
-              activeIcon: Icon(Icons.category,color: primarycolor,),
-              icon: Icon(Icons.category, color: Colors.black,),
+              activeIcon: Image.asset(
+                        "assets/images/chat.png",
+                        color: primarycolor,
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.category,color: primarycolor,),
+              icon: Image.asset(
+                        "assets/images/chat.png",
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.category, color: Colors.black,),
               label: ''
               ),
               BottomNavigationBarItem(
-              activeIcon: Icon(Icons.favorite,color: primarycolor,),
-              icon: Icon(Icons.favorite, color: Colors.black,),
+              activeIcon: Image.asset(
+                        "assets/images/notification.png",
+                        color: primarycolor,
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.favorite,color: primarycolor,),
+              icon: Image.asset(
+                        "assets/images/notification.png",
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.favorite, color: Colors.black,),
               label: ''
               ),
               BottomNavigationBarItem(
-              activeIcon: Icon(Icons.settings,color: primarycolor,),
-              icon: Icon(Icons.settings, color: Colors.black,),
+              activeIcon: Image.asset(
+                        "assets/images/gear.png",
+                        color: primarycolor,
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.settings,color: primarycolor,),
+              icon: Image.asset(
+                        "assets/images/gear.png",
+                        height: getProportionateScreenWidth(25),
+                      ),
+              // Icon(Icons.settings, color: Colors.black,),
               label: ''
               )
           ],
